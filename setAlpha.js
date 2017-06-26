@@ -18,9 +18,9 @@ function setAlpha(photo, r, g, b) {
 	// Loop through all pixels and if pixel color equals rgb(255, 255, 255), white set its alpha to 0 else
 	// get the max new width and height of canvas
 	for (i = 0; i < imageData.length; i += 4) {  
-			if(imageData[i] === r && imageData[i+1] === g && imageData[i+2] === b) {
-					imageData[i+3] = 0;
-			}
+		if(imageData[i] === r && imageData[i+1] === g && imageData[i+2] === b) {
+			imageData[i+3] = 0;
+		}
 	}
 	// After the manipulation, reset the data
 	image.data = imageData;
